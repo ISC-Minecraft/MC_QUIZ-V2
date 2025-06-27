@@ -1,0 +1,1 @@
+execute as @a at @s run playsound entity.firework_rocket.launch master @s ~ ~ ~ 1 1 1

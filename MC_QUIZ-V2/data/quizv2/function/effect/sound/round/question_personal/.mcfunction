@@ -1,0 +1,1 @@
+execute at @s run playsound entity.player.levelup master @s ~ ~ ~ 1 2 1

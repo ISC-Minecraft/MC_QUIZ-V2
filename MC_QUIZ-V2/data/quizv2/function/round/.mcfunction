@@ -17,7 +17,7 @@ gamemode adventure @a[gamemode=spectator]
 title @a title [{text:"- 残り：",color:"white"},{color:"light_purple",score:{name:"$remain",objective:questions}},{color:"light_purple",text:"/"},{color:"light_purple",score:{name:"$max",objective:questions}},{text:" -",color:white}]
 
 #効果音
-function quizv2:effect/sound/game/question_global/
+function quizv2:effect/sound/round/question_global/
 
 #問題を取得
 function quizv2:round/roll with storage quiz:
@@ -29,5 +29,5 @@ execute as @a run function quizv2:round/question
 scoreboard players set $dummy bossbar 200
 
 #カウントダウンの開始
-scoreboard players set $dummy thinktime 11
+scoreboard players set $round countdown 11
 function quizv2:round/count

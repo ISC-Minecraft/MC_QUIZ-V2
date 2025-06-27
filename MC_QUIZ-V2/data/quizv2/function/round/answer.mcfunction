@@ -61,7 +61,7 @@ tellraw @a "====================================================="
 function quizv2:round/fieldbreak with storage quiz:world
 
 #効果音
-function quizv2:effect/sound/game/answer/
+function quizv2:effect/sound/round/answer/
 
 #スコアの加算
 #全体

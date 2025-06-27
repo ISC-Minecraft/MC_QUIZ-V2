@@ -1,0 +1,1 @@
+execute at @s run playsound block.note_block.hat master @s ~ ~ ~ 2 1 1
