@@ -1,6 +1,4 @@
 ##選ばれた乱数を基にgameから問題を抜き出す
-#残り問題数を減らす
-scoreboard players remove $remain questions 1
 #問題の取得
 $data modify storage quiz: question set from storage quiz: game.[$(random)]
 $data remove storage quiz: game.[$(random)]

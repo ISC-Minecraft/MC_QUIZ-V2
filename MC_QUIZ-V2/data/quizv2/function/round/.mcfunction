@@ -7,10 +7,10 @@ title @a times 0t 15t 5t
 item replace entity @a[tag=player] armor.head with golden_helmet[enchantments={"minecraft:binding_curse":1},tooltip_display={hide_tooltip:true},custom_data={movement_lock:false}]
 
 #フィールドの再設置
-function quizv2:game/round/fieldreset with storage quiz:world
+function quizv2:round/fieldreset with storage quiz:world
 
 #落下したプレイヤーをアドベンチャーに戻し、フィールド上にtp
-function quizv2:game/round/tpdrop with storage quiz:world
+function quizv2:round/tpdrop with storage quiz:world
 gamemode adventure @a[gamemode=spectator]
 
 #タイトルの表示
@@ -30,4 +30,4 @@ scoreboard players set $dummy bossbar 200
 
 #カウントダウンの開始
 scoreboard players set $dummy thinktime 11
-function quizv2:game/round/count
+function quizv2:round/count
