@@ -1,5 +1,8 @@
 ##手動で起動、参加者のtpやタグ振り等ゲーム開始前の処理
 
+#ゲーム中ですよ
+data modify storage quiz: play set value true
+
 #タイトルの表示時間設定
 title @a times 0t 15t 5t
 

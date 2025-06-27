@@ -1,5 +1,8 @@
 ##終了処理
 
+#ゲーム中じゃないですよ
+data modify storage quiz: play set value false
+
 #移動制限を解除
 item replace entity @a[tag=player] armor.head with golden_helmet[enchantments={"minecraft:binding_curse":1},tooltip_display={hide_tooltip:true},custom_data={movement_lock:false}]
 
