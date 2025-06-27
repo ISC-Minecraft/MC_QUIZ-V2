@@ -29,5 +29,5 @@ execute as @a run function quizv2:round/question
 scoreboard players set $dummy bossbar 200
 
 #カウントダウンの開始
-scoreboard players set $dummy thinktime 11
+scoreboard players set $round countdown 11
 function quizv2:round/count
