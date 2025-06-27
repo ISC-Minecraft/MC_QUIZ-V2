@@ -36,3 +36,6 @@ bossbar set quiz:timer visible false
 
 #出題数のリセット
 execute store result score $remain questions run scoreboard players get $max questions
+
+#効果音
+function quizv2:effect/sound/frame/end/
