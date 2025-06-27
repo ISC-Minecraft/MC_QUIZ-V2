@@ -1,0 +1,6 @@
+$data modify storage quiz:world fx1 set value $(x1)
+$data modify storage quiz:world fy1 set value $(y1)
+$data modify storage quiz:world fz1 set value $(z1)
+$data modify storage quiz:world fx2 set value $(x2)
+$data modify storage quiz:world fy2 set value $(y2)
+$data modify storage quiz:world fz2 set value $(z2)
