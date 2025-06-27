@@ -1,6 +1,6 @@
 #ランキングのタイトルを動的に変更
-execute if entity @a[tag=player] run scoreboard objectives modify ranking displayname [{text:"---- 残り：",color:"white"},{color:"light_purple",score:{name:"$remain",objective:questions}},{color:"light_purple",text:"/"},{color:"light_purple",score:{name:"$max",objective:questions}},{text:" ----",color:white}]
-execute unless entity @a[tag=player] run scoreboard objectives modify ranking displayname {text:"---- ランキング ----",color:"white"}
+execute unless data storage quiz: {play:true} run scoreboard objectives modify ranking displayname {text:"---- ランキング ----",color:"white"}
+execute if data storage quiz: {play:true} run scoreboard objectives modify ranking displayname [{text:"---- 残り：",color:"white"},{color:"light_purple",score:{name:"$remain",objective:questions}},{color:"light_purple",text:"/"},{color:"light_purple",score:{name:"$max",objective:questions}},{text:" ----",color:white}]
 #ボスバー用スコアを操作
 execute if score $round countdown matches 1.. if score $dummy bossbar matches 1.. run scoreboard players remove $dummy bossbar 1
 execute if score $round countdown matches 0 if score $dummy bossbar matches ..199 run scoreboard players add $dummy bossbar 2
