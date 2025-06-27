@@ -12,6 +12,8 @@ scoreboard players set $1 cnt 1
 scoreboard objectives add bossbar dummy
 scoreboard objectives add countdown dummy
 scoreboard objectives add bonus dummy
+scoreboard objectives add xp dummy
+scoreboard objectives add max dummy
 #ボスバーの作成と設定
 bossbar add quiz:timer timer
 bossbar set quiz:timer max 200
