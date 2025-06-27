@@ -20,14 +20,14 @@ title @a title [{text:"- 残り：",color:"white"},{color:"light_purple",score:{
 function quizv2:effect/sound/game/question_global/
 
 #問題を取得
-function quizv2:game/round/roll with storage quiz:
+function quizv2:round/roll with storage quiz:
 
 #問題を出題
-execute as @a run function quizv2:game/round/question
+execute as @a run function quizv2:round/question
 
 #ボスバーに代入
 scoreboard players set $dummy bossbar 200
 
 #カウントダウンの開始
-scoreboard players set $dummy thinking 11
+scoreboard players set $dummy thinktime 11
 function quizv2:game/round/count
