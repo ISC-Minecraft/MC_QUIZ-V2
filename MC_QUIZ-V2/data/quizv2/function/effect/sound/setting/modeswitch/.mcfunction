@@ -1,0 +1,1 @@
+execute at @s run playsound block.stone_button.click_on master @s ~ ~ ~ 1 2

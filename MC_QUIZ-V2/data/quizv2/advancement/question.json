@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "requirements": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:command_block",
+          "components": {
+            "minecraft:custom_data": {
+              "question": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "quizv2:round/item/use"
+  }
+}
