@@ -36,7 +36,7 @@ scoreboard objectives add ranking dummy
 scoreboard objectives setdisplay sidebar ranking
 execute as @a[tag=player] run scoreboard players add @s ranking 0
 #経験値バーの操作
-execute as @a[tag=player] run function quizv2:effect/visual/xpbar
+execute as @a run function quizv2:effect/visual/xpbar
 #カウントダウンの開始
 scoreboard players set $frame countdown 6
 function quizv2:frame/count

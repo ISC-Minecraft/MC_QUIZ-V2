@@ -81,7 +81,7 @@ execute if data storage quiz: {question:{ans:3}} if score $on_yellow bonus match
 execute if data storage quiz: {question:{ans:4}} if score $on_green bonus matches 1 as @a[predicate=quizv2:on_green] run scoreboard players add @s ranking 100
 
 #経験値バーの操作
-execute as @a[tag=player] run function quizv2:effect/visual/xpbar
+execute as @a run function quizv2:effect/visual/xpbar
 #残り問題数に応じて次の問題に行くか終了処理に行くかの分岐
 execute if score $remain questions matches 1.. run schedule function quizv2:round/ 100t replace
 execute unless score $remain questions matches 1.. run schedule function quizv2:frame/end 100t replace
