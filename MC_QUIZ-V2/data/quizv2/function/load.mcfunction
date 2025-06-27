@@ -9,6 +9,7 @@ function quizv2:setting/library {lib:0}
 scoreboard objectives add cooltime dummy
 scoreboard objectives add mode dummy
 scoreboard objectives add questions dummy
+scoreboard objectives add cnt dummy
 #ボスバーの作成と設定
 bossbar add quiz:timer timer
 bossbar set quiz:timer max 200
