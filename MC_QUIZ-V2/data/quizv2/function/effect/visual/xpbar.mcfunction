@@ -1,12 +1,11 @@
 #バーの操作
 xp set @s 129 levels
-execute store result score $dummy1 xp run scoreboard players get $dummy questions
-scoreboard players set $dummy2 xp 1000
-scoreboard players operation $dummy1 xp *= $dummy2 xp
-scoreboard players operation $dummy1 xp /= $dummy1 questions
+execute store result score $dummy xp run scoreboard players get $remain questions
+scoreboard players set $1000 xp 1000
+scoreboard players operation $dummy xp *= $1000 xp
+scoreboard players operation $dummy xp /= $max questions
 
 xp set @s 0 points
-scoreboard players operation $dummy xp = $dummy1 xp
 
 execute if score $dummy xp matches 512.. run xp add @s 512 points
 execute if score $dummy xp matches 512.. run scoreboard players remove $dummy xp 512
