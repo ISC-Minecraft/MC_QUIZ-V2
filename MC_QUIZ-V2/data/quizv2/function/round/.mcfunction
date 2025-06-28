@@ -11,7 +11,7 @@ function quizv2:round/fieldreset with storage quiz:world
 
 #落下したプレイヤーをアドベンチャーに戻し、フィールド上にtp
 function quizv2:round/tpdrop with storage quiz:world
-gamemode adventure @a[gamemode=spectator]
+gamemode adventure @a[gamemode=spectator,tag=player]
 
 #タイトルの表示
 title @a title [{text:"- 残り：",color:"white"},{color:"light_purple",score:{name:"$remain",objective:questions}},{color:"light_purple",text:"/"},{color:"light_purple",score:{name:"$max",objective:questions}},{text:" -",color:white}]
