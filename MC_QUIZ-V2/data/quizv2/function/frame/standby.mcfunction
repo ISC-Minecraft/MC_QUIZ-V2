@@ -16,6 +16,8 @@ function quizv2:library/ with storage quiz:
 execute store result score $remain questions run scoreboard players get $max questions
 
 #観戦を選んだプレイヤーにspectator、それ以外のプレイヤーにplayerのタグ付け
+tag @a remove player
+tag @a remove spectator
 execute as @a if score @s mode matches 1 run tag @s add spectator
 execute as @a unless score @s mode matches 1 run tag @s add player
 
