@@ -64,6 +64,11 @@ function quizv2:round/fieldbreak with storage quiz:world
 function quizv2:effect/sound/round/answer/
 
 #スコアの加算
+##正解数の増加
+execute if data storage quiz: {question:{ans:1}} as @a[predicate=quizv2:on_red] run scoreboard players add @s correct 1
+execute if data storage quiz: {question:{ans:2}} as @a[predicate=quizv2:on_blue] run scoreboard players add @s correct 1
+execute if data storage quiz: {question:{ans:3}} as @a[predicate=quizv2:on_yellow] run scoreboard players add @s correct 1
+execute if data storage quiz: {question:{ans:4}} as @a[predicate=quizv2:on_green] run scoreboard players add @s correct 1
 #全体
 execute if data storage quiz: {question:{ans:1}} as @a[predicate=quizv2:on_red] run scoreboard players add @s ranking 100
 execute if data storage quiz: {question:{ans:2}} as @a[predicate=quizv2:on_blue] run scoreboard players add @s ranking 100

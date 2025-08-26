@@ -40,6 +40,10 @@ scoreboard objectives remove ranking
 scoreboard objectives add ranking dummy
 scoreboard objectives setdisplay sidebar ranking
 execute as @a[tag=player] run scoreboard players add @s ranking 0
+scoreboard objectives remove correct
+scoreboard objectives add correct dummy
+scoreboard objectives setdisplay list correct
+execute as @a[tag=player] run scoreboard players add @s correct 0
 #経験値バーの操作
 execute as @a run function quizv2:effect/visual/xpbar
 #カウントダウンの開始
