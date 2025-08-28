@@ -84,6 +84,14 @@ execute if data storage quiz: {question:{ans:1}} if score $on_red bonus matches 
 execute if data storage quiz: {question:{ans:2}} if score $on_blue bonus matches 1 as @a[predicate=quizv2:on_blue] run scoreboard players add @s ranking 100
 execute if data storage quiz: {question:{ans:3}} if score $on_yellow bonus matches 1 as @a[predicate=quizv2:on_yellow] run scoreboard players add @s ranking 100
 execute if data storage quiz: {question:{ans:4}} if score $on_green bonus matches 1 as @a[predicate=quizv2:on_green] run scoreboard players add @s ranking 100
+#割り込み問題のとき
+execute if data storage quiz: {question:{ans:1}} as @a[predicate=quizv2:on_red] if data storage quiz: {cutin_ok:-2} run scoreboard players add @s ranking 200
+execute if data storage quiz: {question:{ans:2}} as @a[predicate=quizv2:on_blue] if data storage quiz: {cutin_ok:-2} run scoreboard players add @s ranking 200
+execute if data storage quiz: {question:{ans:3}} as @a[predicate=quizv2:on_yellow] if data storage quiz: {cutin_ok:-2} run scoreboard players add @s ranking 200
+execute if data storage quiz: {question:{ans:4}} as @a[predicate=quizv2:on_green] if data storage quiz: {cutin_ok:-2} run scoreboard players add @s ranking 200
+
+#割り込み問題なら以降出ないように
+execute if data storage quiz: {cutin_ok:-2} run data modify storage quiz: cutin_ok set value -1
 
 #経験値バーの操作
 execute as @a run function quizv2:effect/visual/xpbar

@@ -1,0 +1,1 @@
+$data modify storage quiz: question set value {text:"$(text)",ans:$(ans),choices:["$(choices1)問目","$(choices2)問目","$(choices3)問目","$(choices4)問目"]}

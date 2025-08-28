@@ -12,6 +12,9 @@ gamemode adventure @a[gamemode=spectator]
 #成績上位者の取得
 function quizv2:frame/getmax
 
+#問題の再読み込み
+function quizv2:library/ with storage quiz:
+
 #メッセージの表示
 tellraw @a "====================================================="
 tellraw @a {text:"[ゲーム終了]",bold:true,color:"light_purple"}
@@ -36,6 +39,9 @@ function quizv2:frame/endtp with storage quiz:world
 
 #ボスバーの非表示
 bossbar set quiz:timer visible false
+
+#割り込みのリセット
+execute if data storage quiz: {cutin_ok:-1} run data modify storage quiz: cutin_ok set value 1
 
 #出題数のリセット
 execute store result score $remain questions run scoreboard players get $max questions
