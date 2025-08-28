@@ -10,6 +10,9 @@ function quizv2:round/cutin/getquestion
 #割り込み問題中
 data modify storage quiz: cutin_ok set value -2
 
+#経験値バーを隠す
+execute as @a run function quizv2:effect/visual/xpbar
+
 #問題を出題
 execute as @a run function quizv2:round/question
 
