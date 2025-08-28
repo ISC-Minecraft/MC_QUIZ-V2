@@ -12,6 +12,9 @@ gamemode adventure @a[gamemode=spectator]
 #成績上位者の取得
 function quizv2:frame/getmax
 
+#問題の再読み込み
+function quizv2:library/ with storage quiz:
+
 #メッセージの表示
 tellraw @a "====================================================="
 tellraw @a {text:"[ゲーム終了]",bold:true,color:"light_purple"}

@@ -38,3 +38,7 @@ scoreboard players set $ansin cutin 100
 function quizv2:round/cutin/ansin
 #問題を組み立て
 function quizv2:round/cutin/qin with storage quiz: cutin.question
+#要素数の更新
+execute store result score $cnt cnt if data storage quiz: game[]
+scoreboard players operation $cnt cnt -= $1 cnt
+execute store result storage quiz: cnt int 1 run scoreboard players get $cnt cnt
