@@ -13,6 +13,11 @@ function quizv2:round/fieldreset with storage quiz:world
 function quizv2:round/tpdrop with storage quiz:world
 gamemode adventure @a[gamemode=spectator,tag=player]
 
+##  割り込みの抽選
+    execute if predicate quizv2:cutin run return run function quizv2:round/cutin/
+
+##  >>成功したらここまで
+
 #タイトルの表示
 title @a title [{text:"- 残り：",color:"white"},{color:"light_purple",score:{name:"$remain",objective:questions}},{color:"light_purple",text:"/"},{color:"light_purple",score:{name:"$max",objective:questions}},{text:" -",color:white}]
 
