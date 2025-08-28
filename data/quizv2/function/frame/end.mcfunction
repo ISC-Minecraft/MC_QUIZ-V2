@@ -37,6 +37,9 @@ function quizv2:frame/endtp with storage quiz:world
 #ボスバーの非表示
 bossbar set quiz:timer visible false
 
+#割り込みのリセット
+execute if data storage quiz: {cutin_ok:-1} run data modify storage quiz: cutin_ok set value 1
+
 #出題数のリセット
 execute store result score $remain questions run scoreboard players get $max questions
 

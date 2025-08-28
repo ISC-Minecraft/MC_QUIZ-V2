@@ -14,7 +14,7 @@ function quizv2:round/tpdrop with storage quiz:world
 gamemode adventure @a[gamemode=spectator,tag=player]
 
 ##  割り込みの抽選
-    execute if predicate quizv2:cutin run return run function quizv2:round/cutin/
+    execute if data storage quiz: {cutin_ok:1} if predicate quizv2:cutin run return run function quizv2:round/cutin/
 
 ##  >>成功したらここまで
 

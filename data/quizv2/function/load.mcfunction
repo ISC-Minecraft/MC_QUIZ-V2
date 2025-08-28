@@ -25,5 +25,7 @@ team add nohit
 team modify nohit collisionRule never
 #デフォルトライブラリの設定
 function quizv2:setting/library {lib:0}
+#割り込みの無効化
+data modify storage quiz: cutin_ok set value 0
 #読み込み完了通知
-say reloaded!
+tellraw @a "[MCQuizV2] reloaded!"

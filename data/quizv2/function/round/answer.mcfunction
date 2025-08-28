@@ -85,6 +85,9 @@ execute if data storage quiz: {question:{ans:2}} if score $on_blue bonus matches
 execute if data storage quiz: {question:{ans:3}} if score $on_yellow bonus matches 1 as @a[predicate=quizv2:on_yellow] run scoreboard players add @s ranking 100
 execute if data storage quiz: {question:{ans:4}} if score $on_green bonus matches 1 as @a[predicate=quizv2:on_green] run scoreboard players add @s ranking 100
 
+#割り込み問題なら以降出ないように
+execute if data storage quiz: {cutin_ok:-2} run data modify storage quiz: cutin_ok set value -1
+
 #経験値バーの操作
 execute as @a run function quizv2:effect/visual/xpbar
 #残り問題数に応じて次の問題に行くか終了処理に行くかの分岐
