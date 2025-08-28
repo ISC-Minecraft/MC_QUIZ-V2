@@ -30,6 +30,8 @@ execute if score $dummy xp matches 1.. run scoreboard players remove $dummy xp 1
 
 scoreboard players reset $dummy xp
 
+execute if data storage quiz: {cutin_ok:-2} run xp set @s 1000 points
+
 #レベルの操作
 #rankingの値をレベルに代入
 xp set @s 0 levels
