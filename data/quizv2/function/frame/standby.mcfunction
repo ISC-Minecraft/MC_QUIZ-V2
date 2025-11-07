@@ -13,7 +13,7 @@ bossbar set quiz:timer players @a
 function quizv2:library/ with storage quiz:
 
 #出題数のリセット
-execute store result score $remain questions run scoreboard players get $max questions
+scoreboard players operation $remain questions = $max questions
 
 #観戦を選んだプレイヤーにspectator、それ以外のプレイヤーにplayerのタグ付け
 tag @a remove player
