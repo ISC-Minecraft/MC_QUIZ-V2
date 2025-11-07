@@ -30,6 +30,10 @@
 
 看板等からだれでも実行できるようにすると良い
 
+```function quizv2:setting/cutin```
+
+試合中にスペシャル問題が割り込むかどうかを切り替えます
+
 ```function quizv2:setting/questions/up```
 
 ```function quizv2:setting/questions/down```
